@@ -8,7 +8,7 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 200px;
 }
 
@@ -22,10 +22,14 @@
   align-items: center;
   z-index: 10;
   width: 100%;
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
 }
 
-.shrunk ~ section {
-  padding-top: 200px;
+.titleText {
+  transition: transform 1s ease;
+}
+
+.shrunk .titleText {
+  transform: translateX(700px) scale(0.1);
+  transform-origin: center;
 }
