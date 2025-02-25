@@ -6,7 +6,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-
+import Lenis from "lenis";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -28,6 +28,18 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Initialize Lenis
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
+
+    // // Listen for the scroll event and log the event data
+    // lenis.on("scroll", (e) => {
+    //   console.log(e);
+    // });
   }, []);
 
   return (
