@@ -5,49 +5,25 @@ import Header from "./components/Header/Header";
 import AboutMe from "./components/AboutMe/AboutMe";
 import Projects from "./components/Projects/Projects";
 import Lenis from "lenis";
+import Card1 from "./components/Card1/Card1.jsx";
 
 export default function Home() {
-  const [isShrunk, setIsShrunk] = useState(false);
-  console.log(isShrunk);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setIsShrunk(true);
-      } else {
-        setIsShrunk(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: true,
     });
-
-    // lenis.on("scroll", (e) => {
-    //   console.log(e);
-    // });
   }, []);
 
   return (
-    <div className="main">
-      <div className="div1">Hello</div>
+    <main className="main">
+      <section className="div1">
+        <Card1 />
+      </section>
 
-      <div className="div2">About me</div>
-      <div className="div3">Projects</div>
-      <div className="div4">Skills</div>
-      <div className="div5">Contact</div>
-    </div>
-
-    // <div className={styles.page}>
-    //   <Header isShrunk={isShrunk} />
-    //   <div className={styles.wrapper}>
-    //     <AboutMe />
-    //     <Projects />
-    //   </div>
-    // </div>
+      <section className="div2">About me</section>
+      <section className="div3">Projects</section>
+      <section className="div4">Skills</section>
+      <section className="div5">Contact</section>
+    </main>
   );
 }
