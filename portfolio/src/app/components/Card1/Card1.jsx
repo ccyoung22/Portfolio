@@ -11,13 +11,13 @@ function Card1() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
-    <div className={styles.containerCard1}>
+    <section className={styles.containerCard1}>
       <Link href="/portfolio/src/app/components/Card1" passHref></Link>
       <button className={styles.homeButton} onClick={scrollToFirstPanel}>
         Home
       </button>
-      <p className={styles.hiText}>Hi I'm Caitlin</p>
-    </div>
+      <h1 className={styles.hiText}>Hi I'm Caitlin</h1>
+    </section>
   );
 }
 

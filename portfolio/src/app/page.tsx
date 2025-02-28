@@ -1,11 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./page.module.css";
-import Header from "./components/Header/Header";
-import AboutMe from "./components/AboutMe/AboutMe";
-import Projects from "./components/Projects/Projects";
 import Lenis from "lenis";
 import Card1 from "./components/Card1/Card1.jsx";
+import Card2 from "./components/Card2/Card2.jsx";
 
 export default function Home() {
   useEffect(() => {
@@ -20,7 +17,9 @@ export default function Home() {
         <Card1 />
       </section>
 
-      <section className="div2">About me</section>
+      <section className="div2">
+        <Card2 />
+      </section>
       <section className="div3">Projects</section>
       <section className="div4">Skills</section>
       <section className="div5">Contact</section>
